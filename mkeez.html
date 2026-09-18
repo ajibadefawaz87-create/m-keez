@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>M-KEEZ Cakes & More | Pastries & Cakes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="mkeez.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">M</span>
+
+            <div>
+                <h2>M-KEEZ</h2>
+                <small>CAKES & MORE</small>
+            </div>
+        </div>
+
+        <nav id="nav">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+
+            <a
+                class="nav-order"
+                href="https://wa.me/2348030486292?text=Hello%20M-KEEZ%20Cakes%20%26%20More%2C%20I%20would%20like%20to%20place%20an%20order."
+                target="_blank"
+            >
+                Order on WhatsApp
+            </a>
+        </nav>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-heading">WELCOME TO M-KEEZ</p>
+
+            <h1>
+                Sweet moments
+                <span>start with a good bite.</span>
+            </h1>
+
+            <p>
+                Delicious cakes, pastries and tasty treats made
+                with love for every occasion.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="btn primary">
+                    Explore Our Menu
+                </a>
+
+                <a
+                    href="https://wa.me/2348030486292?text=Hello%20M-KEEZ%20Cakes%20%26%20More%2C%20I%20would%20like%20to%20place%20an%20order."
+                    target="_blank"
+                    class="btn secondary"
+                >
+                    Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRO ================= -->
+    <section class="intro">
+
+        <p class="section-label">M-KEEZ CAKES & MORE</p>
+
+        <h2>
+            Freshly made.
+            <span>Made to make you smile.</span>
+        </h2>
+
+        <p class="intro-text">
+            From delicious meat pies and egg rolls to beautiful cakes
+            and tasty small chops, M-KEEZ Cakes & More brings you
+            quality treats made for every craving and celebration.
+        </p>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+    <section class="menu-section" id="menu">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="section-label">OUR MENU</p>
+
+                <h2>Something delicious<br>for everyone.</h2>
+            </div>
+
+            <p>
+                Take your pick from some of our customer favourites.
+                More delicious options are available.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+            <!-- Meat Pie -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/nigerian_meat_pie.jpg"
+                        alt="Nigerian Meat Pie"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <span>PASTRY</span>
+
+                    <h3>Meat Pie</h3>
+
+                    <p>
+                        Golden, flaky pastry filled with delicious
+                        seasoned meat and vegetables.
+                    </p>
+
+                    <button onclick="orderItem('Meat Pie')">
+                        Order on WhatsApp →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Egg Roll -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://art.whisk.com/image/upload/fl_progressive,h_600,w_800,c_fill/v1687902996/v3/user-recipes/7b7e84b4939324ff52631bbcd74d689c.jpg"
+                        alt="Nigerian Egg Roll"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <span>SNACK</span>
+
+                    <h3>Egg Roll</h3>
+
+                    <p>
+                        Soft, delicious dough wrapped around a perfectly
+                        cooked egg.
+                    </p>
+
+                    <button onclick="orderItem('Egg Roll')">
+                        Order on WhatsApp →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cupcakes -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://www.nairaland.com/attachments/4471799_img8739_jpeg731580e41a546e4bc00dbbde5cd46575"
+                        alt="Pink Cupcakes"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <span>CAKES</span>
+
+                    <h3>Cupcakes</h3>
+
+                    <p>
+                        Soft and delicious cupcakes perfect for parties,
+                        birthdays and special moments.
+                    </p>
+
+                    <button onclick="orderItem('Cupcakes')">
+                        Order on WhatsApp →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Small Chops -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="https://img.cdn4dd.com/cdn-cgi/image/fit%3Dcover,width%3D600,height%3D400,format%3Dauto,quality%3D80/https://doordash-static.s3.amazonaws.com/media/store/header/bc88800b-4d95-4c74-9903-89ae7a252efb.jpg"
+                        alt="Small Chops"
+                    >
+                </div>
+
+                <div class="product-info">
+
+                    <span>PARTY TREATS</span>
+
+                    <h3>Small Chops</h3>
+
+                    <p>
+                        A tasty selection of party favourites perfect
+                        for events and celebrations.
+                    </p>
+
+                    <button onclick="orderItem('Small Chops')">
+                        Order on WhatsApp →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MORE PRODUCTS ================= -->
+    <section class="more-section">
+
+        <div class="more-content">
+
+            <p class="section-label">AND THERE'S MORE...</p>
+
+            <h2>
+                Your favourite treats,
+                <span>all in one place.</span>
+            </h2>
+
+            <p>
+                Looking for something else? We also make delicious
+                doughnuts, puff-puff, sausage rolls, fish rolls,
+                samosas, cakes and custom orders.
+            </p>
+
+            <a
+                href="https://wa.me/2348030486292?text=Hello%20M-KEEZ%20Cakes%20%26%20More%2C%20I%20want%20to%20ask%20about%20your%20available%20pastries."
+                target="_blank"
+                class="btn primary"
+            >
+                Ask About Our Menu
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+
+        <div class="about-image">
+            <div class="about-badge">
+                <strong>M-KEEZ</strong>
+                <span>Made with love</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <p class="section-label">ABOUT US</p>
+
+            <h2>
+                Good food.
+                <span>Good mood.</span>
+            </h2>
+
+            <p>
+                At M-KEEZ Cakes & More, we believe good food should
+                look good, taste amazing and leave you wanting more.
+            </p>
+
+            <p>
+                Whether you're craving a quick snack or planning
+                a special celebration, we're here to make your
+                moments sweeter.
+            </p>
+
+            <a
+                href="https://wa.me/2348030486292?text=Hello%20M-KEEZ%20Cakes%20%26%20More."
+                target="_blank"
+                class="text-link"
+            >
+                Talk to us on WhatsApp →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+
+        <div>
+
+            <p class="section-label">READY TO ORDER?</p>
+
+            <h2>
+                Let's make your
+                <span>day sweeter.</span>
+            </h2>
+
+            <p>
+                Place your order directly through WhatsApp.
+                We'll be happy to help you choose your treats.
+            </p>
+
+        </div>
+
+        <a
+            href="https://wa.me/2348030486292?text=Hello%20M-KEEZ%20Cakes%20%26%20More%2C%20I%20would%20like%20to%20place%20an%20order."
+            target="_blank"
+            class="whatsapp-button"
+        >
+            💬 Order on WhatsApp
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+
+        <div class="footer-logo">
+
+            <span class="logo-icon">M</span>
+
+            <div>
+                <h3>M-KEEZ</h3>
+                <small>CAKES & MORE</small>
+            </div>
+
+        </div>
+
+        <p>
+            Cakes • Pastries • Treats • More
+        </p>
+
+        <div class="socials">
+
+            <a
+                href="https://instagram.com/m_keezcakes"
+                target="_blank"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.facebook.com/M_keezcakes"
+                target="_blank"
+            >
+                Facebook
+            </a>
+
+            <a
+                href="https://wa.me/2348030486292"
+                target="_blank"
+            >
+                WhatsApp
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 M-KEEZ Cakes & More. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="mkeez.js"></script>
+
+</body>
+</html>

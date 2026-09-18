@@ -1,0 +1,690 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #24151d;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+:root {
+    --pink: #e83e82;
+    --dark-pink: #b51f5e;
+    --light-pink: #fff0f6;
+    --lighter-pink: #fff8fb;
+    --text: #24151d;
+    --muted: #75656c;
+    --white: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 80px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--pink);
+    color: white;
+
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.logo small {
+    color: var(--pink);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+.nav-order {
+    background: var(--pink);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+.nav-order:hover {
+    background: var(--dark-pink);
+    color: white;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 240, 246, 0.98) 0%,
+            rgba(255, 240, 246, 0.9) 45%,
+            rgba(255, 240, 246, 0.25) 100%
+        ),
+        url("https://snapcalorie-webflow-website.s3.us-east-2.amazonaws.com/media/food_pics_v2/medium/nigerian_meat_pie.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-heading,
+.section-label {
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span,
+h2 span {
+    color: var(--pink);
+}
+
+.hero-content > p:not(.small-heading) {
+    max-width: 500px;
+    color: var(--muted);
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: var(--pink);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: var(--dark-pink);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    border: 2px solid var(--pink);
+    color: var(--pink);
+}
+
+.btn.secondary:hover {
+    background: var(--pink);
+    color: white;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    text-align: center;
+    padding: 100px 7%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.intro h2,
+.section-heading h2,
+.more-content h2,
+.about-content h2,
+.contact h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(35px, 4vw, 55px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    color: var(--muted);
+    max-width: 700px;
+    margin: auto;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-section {
+    background: var(--lighter-pink);
+    padding: 100px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.section-heading > p {
+    max-width: 380px;
+    color: var(--muted);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(181, 31, 94, 0.08);
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-image {
+    height: 230px;
+    overflow: hidden;
+}
+
+.product-image img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 25px;
+}
+
+.product-info span {
+    font-size: 10px;
+    color: var(--pink);
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.product-info h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    margin: 5px 0 10px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.product-info button {
+    background: none;
+    border: none;
+    color: var(--pink);
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+/* =========================
+   MORE SECTION
+========================= */
+
+.more-section {
+    padding: 110px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(181, 31, 94, 0.95),
+            rgba(232, 62, 130, 0.85)
+        ),
+        url("https://img.cdn4dd.com/cdn-cgi/image/fit%3Dcover%2Cwidth%3D600%2Cheight%3D400%2Cformat%3Dauto%2Cquality%3D80/https://doordash-static.s3.amazonaws.com/media/store/header/bc88800b-4d95-4c74-9903-89ae7a252efb.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.more-content {
+    max-width: 650px;
+}
+
+.more-content .section-label {
+    color: white;
+}
+
+.more-content h2 {
+    color: white;
+}
+
+.more-content p:not(.section-label) {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.more-content .btn {
+    background: white;
+    color: var(--dark-pink);
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 110px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image {
+    min-height: 500px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(232, 62, 130, 0.15),
+            rgba(255, 240, 246, 0.8)
+        ),
+        url("https://art.whisk.com/image/upload/fl_progressive,h_600,w_800,c_fill/v1687902996/v3/user-recipes/7b7e84b4939324ff52631bbcd74d689c.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.about-badge {
+    background: white;
+    padding: 20px 35px;
+    border-radius: 20px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-badge strong {
+    display: block;
+    color: var(--pink);
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+}
+
+.about-badge span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.about-content p:not(.section-label) {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.text-link {
+    color: var(--pink);
+    font-weight: 700;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    margin: 0 7% 80px;
+
+    padding: 70px;
+
+    border-radius: 30px;
+
+    background: var(--light-pink);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact p:not(.section-label) {
+    color: var(--muted);
+    max-width: 550px;
+}
+
+.whatsapp-button {
+    background: #25d366;
+    color: white;
+
+    padding: 18px 28px;
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #24151d;
+    color: white;
+
+    text-align: center;
+
+    padding: 60px 7%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 15px;
+}
+
+.footer-logo h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.footer-logo small {
+    display: block;
+    color: var(--pink);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+footer > p {
+    color: #c8b8bf;
+    font-size: 14px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.socials a {
+    color: white;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: var(--pink);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        display: none;
+        flex-direction: column;
+
+        padding: 25px;
+        gap: 20px;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 70px 5%;
+    }
+
+    .intro,
+    .menu-section,
+    .more-section,
+    .about {
+        padding: 75px 5%;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    .section-heading > p {
+        margin-top: 20px;
+    }
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        min-height: 400px;
+    }
+
+    .contact {
+        margin: 0 5% 60px;
+        padding: 45px 30px;
+
+        display: block;
+    }
+
+    .whatsapp-button {
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+
+    .socials {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
